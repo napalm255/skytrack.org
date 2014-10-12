@@ -1,0 +1,16 @@
+{
+  "locations" : [
+    { "state" : "maryland", "city" : "frederick", "coords" : "39.4263,-77.4204" },
+    { "state" : "virginia", "city" : "arlington", "coords" : "38.8803,-77.1083" }
+  ],
+
+  "forecastio" : {
+    "url" : "https://api.forecast.io/forecast/#APIKEY#/#COORDS#",
+    "apikey" : "36a68a5fb69e986a54ca539061975ca0"
+  },
+
+  "wunderground" : {
+    "url" : "http://api.wunderground.com/api/#APIKEY#/hourly/q/#COORDS#.json",
+    "apikey" : "d106d3c2e42d30da"
+  }
+}
