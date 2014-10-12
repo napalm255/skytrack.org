@@ -77,7 +77,7 @@ $(function () {
       },
       yAxis: {
           title: {
-              text: 'Percent Change of Precipitation (%)'
+              text: 'Percent Chance of Precipitation (%)'
           },
           plotLines: [{
               value: 0,
