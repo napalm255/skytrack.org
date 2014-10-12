@@ -1,13 +1,13 @@
 <?php
 
-  include('httpful.phar');
-  include('weather.class.php');
+  include(dirname(__FILE__) . '/httpful.phar');
+  include(dirname(__FILE__) . '/weather.class.php');
 
   $plugin = new StdClass();
   $plugin->name = "wunderground";
 
   $settings = new StdClass();
-  $settings = json_decode(file_get_contents('settings.json'), false);
+  $settings = json_decode(file_get_contents(dirname(__FILE__) . '/settings.json'), false);
 
   $plugin->apikey = $settings->{$plugin->name}->apikey;
   $plugin->url = $settings->{$plugin->name}->url;
@@ -44,4 +44,4 @@
     }
   }
 
-echo "done.";
+echo $plugin->name . " updated.";

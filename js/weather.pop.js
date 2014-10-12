@@ -1,14 +1,31 @@
 $(function () {
   $.getJSON( "service/weather.out.php", function( data ) {
+    $('#container_location').html(data.city + ', ' + data.state)
+      .css('text-align', 'center')
+      .css('font-family', "'Roboto', sans-serif")
+      .css('font-weight', 'bold')
+      .css('font-size', '20px')
+      .css('background-color', '#c0c0c0')
+      .css('padding', '2px')
+      .css('width', '100%')
+    ;
+    $('#container_date').html(data.date)
+      .css('text-align', 'center')
+      .css('font-family', "'Roboto', sans-serif")
+      .css('font-weight', 'bold')
+      .css('background-color', '#c0c0c0')
+      .css('padding', '2px')
+      .css('width', '100%')
+    ;
     $('#container_temp').highcharts({
       title: {
           text: 'Hourly Temperature',
           x: -20 //center
       },
-      subtitle: {
-          text: data.city + ', ' + data.state + '<br>' + data.date,
-          x: -20
-      },
+      //subtitle: {
+      //    text: data.city + ', ' + data.state + '<br>' + data.date,
+      //    x: -20
+      //},
       xAxis: {
           allowDecimals: false,
           title: {
@@ -45,10 +62,10 @@ $(function () {
           text: 'Hourly Precipitation Percentage',
           x: -20 //center
       },
-      subtitle: {
-          text: data.city + ', ' + data.state + '<br>' + data.date,
-          x: -20
-      },
+      //subtitle: {
+      //    text: data.city + ', ' + data.state + '<br>' + data.date,
+      //    x: -20
+      //},
       xAxis: {
           allowDecimals: false,
           title: {

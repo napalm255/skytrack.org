@@ -1,6 +1,6 @@
 <?php
 
-  require 'aws.phar';
+  require(dirname(__FILE__) . '/aws.phar');
 
   use Aws\DynamoDb\DynamoDbClient;
   use Aws\Common\Enum\Region;
