@@ -1,6 +1,7 @@
 <?php
 
   require(dirname(__FILE__) . '/aws.phar');
+  date_default_timezone_set('America/New_York');
 
   use Aws\DynamoDb\DynamoDbClient;
   use Aws\Common\Enum\Region;
